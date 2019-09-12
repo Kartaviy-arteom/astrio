@@ -1,0 +1,91 @@
+.banner {
+  position: relative;
+  margin: 20px auto 0 auto;
+  width: 475px;
+  height: 215px;
+}
+
+.banner img {
+  display: block;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 100%;
+}
+
+.banner__btn {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background-color: #3a3a3a;
+  border: none;
+  border-radius: 3px;
+  top: 167px;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.banner__btn:hover,
+.banner__btn:focus {
+  opacity: 0.9;
+}
+
+.banner__btn:active {
+  opacity: 0.75;
+}
+
+.banner__btn:before,
+.banner__btn:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 15px;
+  background-color: #fff;
+  top: 8px;
+  transform-origin: left;
+  transform: rotate(-45deg);
+  right: 15px;
+}
+
+.banner__btn:before {
+  top: 12px;
+  transform-origin: left;
+  transform: rotate(45deg);
+}
+
+.banner__btn--previous {
+  left: 10px;
+}
+
+.banner__btn--previous:before,
+.banner__btn--previous:after {
+  transform-origin: right;
+  left: 15px;
+}
+
+.banner__btn--previous:after {
+  top: 12px;
+}
+
+.banner__btn--previous:before {
+  top: 8px;
+}
+
+.banner__btn--next {
+  right: 10px;
+}
+
+.banner__gallery {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+}
+
+.banner__gallery li {
+  height: 100%;
+  display: none;
+}
+
+.banner__gallery li.active {
+  display: block;
+}

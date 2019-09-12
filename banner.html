@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test banner</title>
+  <meta name="description" content="Astrio test: banner"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="banner">
+    <ul class="banner__gallery">
+      <li class="active">
+        <picture>
+          <source type="image/webp" srcset="img/banner-photo-1@1x.webp">
+          <img src="img/banner-photo-1@1x.jpg" alt="funny aunts in our clothes" width="475" height="215">
+        </picture>
+      </li>
+      <li>
+        <picture>
+          <source type="image/webp" srcset="img/banner-photo-2@1x.webp">
+          <img src="img/banner-photo-2@1x.jpg" alt="funny aunts in our clothes" width="475" height="215">
+        </picture>
+      </li>
+    </ul>
+    <button class="banner__btn banner__btn--previous">previous photo</button>
+    <button class="banner__btn banner__btn--next">next photo</button>
+  </div>
+  <script src="js/banner.js"></script>
+
+</body>
+</html>
