@@ -10,7 +10,7 @@ gulp.task("server", function () {
     open: true,
     cors: true,
     ui: false,
-    index: "banner.html"
+    index: "listing.html"
   });
 
   gulp.watch("css/*.css").on("change", server.reload);
