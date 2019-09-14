@@ -23,7 +23,9 @@ img {
 .catalog__list {
   margin: 0;
   padding: 0;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 157px 157px 157px;
   grid-template-columns: 157px 157px 157px;
   grid-row-gap: 25px;
   list-style: none;
@@ -31,17 +33,28 @@ img {
 
 .catalog__item, .item > div:first-child {
   width: 157px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 .item {
   outline: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .item img {
@@ -66,7 +79,9 @@ img {
 
 .item div>span,
 .item span {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 58px;
 }
 
@@ -83,7 +98,8 @@ img {
 
 .item__add {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 74px;
   padding-top: 0.3125rem;
   padding-bottom: 0.5rem;
@@ -194,11 +210,13 @@ div .item__add:first-of-type {
   .item:focus>div:first-of-type {
     margin-bottom: 28px;
     border: 3px solid #eb5c3e;
-    box-shadow: 0 16px 32px -16px #000;
+    -webkit-box-shadow: 0 16px 32px -16px #000;
+            box-shadow: 0 16px 32px -16px #000;
   }
 
   .item:hover,
   .item:focus {
+    -ms-grid-row-span: 2;
     grid-row-end: span 2;
   }
 }
@@ -215,12 +233,17 @@ div .item__add:first-of-type {
 @media (max-width: 1359px) {
   .item>div:first-child {
     width: 100%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .item h2 {
-    order: 2;
-    box-sizing: border-box;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 135px;
     font-weight: 700;
     padding: 0 5px;
@@ -243,24 +266,33 @@ div .item__add:first-of-type {
   .item p {
     display: block;
     width: 65%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 0 35px;
     margin-top: 0;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 
   div .item__add:first-of-type {
     display: block;
-    order: 4;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
     margin-right: 35px;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 
   .item div>span {
     margin-right: 40px;
     display: block;
-    order: 3;
-    align-self: flex-end;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 
   .item>span,
@@ -280,14 +312,21 @@ div .item__add:first-of-type {
     min-width: 320px;
     padding: 0 20px;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 
   .item>div:first-child {
     width: 100%;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
 
   .item img {
@@ -311,7 +350,9 @@ div .item__add:first-of-type {
   }
 
   .item div>span {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin: 10px 0 10px 0;
     font-size: 1.3rem;
   }
@@ -321,7 +362,9 @@ div .item__add:first-of-type {
   }
 
   div .item__add:first-of-type {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin: 0;
     font-size: 1.5rem;
     line-height: 1.2;
@@ -342,6 +385,8 @@ div .item__add:first-of-type {
   .item-rating::before {
     height: 3px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
